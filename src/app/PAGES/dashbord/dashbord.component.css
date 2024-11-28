@@ -1,0 +1,293 @@
+/* Appliquez Flexbox à container-fluid pour une disposition en colonne */
+.container-fluid {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Appliquez Flexbox à no-gutters pour une disposition en ligne */
+.row.no-gutters {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Configurez col-lg-10 pour qu'il utilise Flexbox avec une direction de colonne */
+.col-lg-10 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* content-area utilisera l'espace disponible et permettra le défilement */
+.content-area {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+
+/* Assurez-vous que le footer reste visible en bas */
+.footer {
+    /*background-color: rgba(236, 236, 236, 0.7);*/
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.tb{
+    display: flex;
+    margin-left: 70px;
+    
+}
+
+/*** css de accueil meme ***/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permet de faire passer les éléments sur une nouvelle ligne si nécessaire */
+    gap: 10px;
+    /* Ajustez l'espace entre les carrés */
+    justify-content: center;
+    /* Centrer les éléments dans la ligne */
+}
+
+.carre {
+    width: 100%;
+    /* Largeur par défaut */
+    max-width: 350px;
+    /* Limite de largeur */
+    height: 130px;
+    background-color: #D9D9D9;
+    margin: 0 auto;
+    /* Centrer l'élément */
+}
+
+.carrecontenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Media queries pour écrans de différentes tailles */
+@media (min-width: 768px) {
+    .carre {
+        width: calc(50% - 20px);
+        /* Deux carrés par ligne */
+    }
+}
+
+@media (min-width: 1024px) {
+    .carre {
+        width: calc(33.33% - 20px);
+        /* Trois carrés par ligne */
+    }
+}
+
+.contain {
+    padding-top: 5px;
+    display: flex;
+}
+
+.carrecontenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centre l'image et le texte */
+}
+
+.carreconte {
+    width: 100%;
+    max-width: 550px;
+    height: 70px;
+
+    background-color: #D9D9D9;
+    margin: 0 auto;
+    margin-left: 70px;
+}
+
+.carrecont {
+    margin-right: 650px;
+    width: 100%;
+    max-width: 200px;
+    height: 70px;
+    background-color: #D9D9D9;
+    /* Centrer l'élément */
+}
+
+.carrecontenu p {
+    margin-right: 200px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.number {
+    margin-left: 130px;
+    font-size: 28px;
+    color: #4CD137;
+}
+
+.ret {
+    font-size: 28px;
+    color: #C62D2D;
+    margin-left: 130px;
+}
+
+.dep {
+    font-size: 28px;
+    color: #E67E22;
+    margin-left: 130px;
+}
+
+
+
+/*** le tableau ***/
+.tableau {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 380px;
+    width: 90%;
+    background-color: #D9D9D9;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+/* Table styling */
+.vertical-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.vertical-table th,
+.vertical-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #0a0000;
+}
+.ppp{
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.formcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+}
+
+
+/*** rendre le tableau responsive ***/
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+        /* Cacher l'en-tête sur les petits écrans */
+    }
+
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 5px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-right: 5px;
+    }
+}
+
+
+
+.tab {
+    color: #0097E6;
+}
+
+.arran {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tex {
+    color: black;
+    /* Couleur noire pour le texte "Personnes" */
+}
+
+.te {
+    color: #E67E22;
+}
+
+/* Styling for menuLeft */
+.menuLeft {
+    background-color: #D9D9D9;
+    padding: 10px;
+    color: black;
+    margin-left: 10px;
+
+}
+
+.menuLeft {
+    text-align: right;
+}
+
+
+/* Table style */
+.table {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Header style */
+.table thead th {
+    color: #0b0000;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Body rows style */
+.table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect on rows */
+.table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Column specific styles */
+.table tbody td:nth-child(1) {
+    color: #ff5733;
+    /* Style pour la colonne "Code paie" */
+}
+
+.table tbody td:nth-child(2) {
+    color: #337ab7;
+    /* Style pour la colonne "Date versement" */
+}
+
+.table tbody td:nth-child(3) {
+    font-weight: bold;
+    /* Style pour la colonne "Somme" */
+}

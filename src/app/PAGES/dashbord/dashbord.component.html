@@ -1,0 +1,86 @@
+<div class="container-fluid h-100 border-dark">
+
+
+
+    <section class="flex-grow-1 content-area" style="height: 100%;  ">
+        
+    <div class="tb">
+        <img src="../../../assets/surM.png" > 
+        <h5> &nbsp;&nbsp;&nbsp; Tableau de bord</h5>
+    </div>
+       
+<pre></pre>
+        <div class="container">
+            <div class="carre">
+                <div class="carrecontenu">
+                    <p>Total Atelier</p>
+                    <div class="number">{{ 200000 }} </div>
+
+                </div>
+            </div>
+
+            <div class="carre">
+                <div class="carrecontenu">
+                    <p>Total Client</p>
+                    <div class="ret">{{ 20000 }} </div>
+
+                </div>
+            </div>
+            <div class="carre">
+                <div class="carrecontenu">
+                    <p>Total Position</p>
+                    <div class="dep">{{ 20000 }} </div>
+
+                </div>
+            </div>
+        </div>
+
+        <pre></pre>
+
+        <div class="contain">
+            <div class="carreconte">
+                <p class="ppp">
+                    rechercher atelier ...
+                </p>
+            </div>
+
+
+            <div class="carrecont">
+
+            </div>
+
+
+        </div>
+
+        <div class="tableau">
+
+
+            <div class="menuLeft" style="color: black; background-color: #D9D9D9;">
+                <div class="sales-details" style="color: rgb(9, 1, 1); ">
+
+                    <table class="vertical-table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nom atelier</th>
+                                <th>Client</th>
+                                <th>Position</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let pai of depots">
+                                <td>{{ pai.nom }}</td>
+                                <td>{{ pai.niveau }}</td>
+                                <td>{{ pai.totalEtudiants }}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
